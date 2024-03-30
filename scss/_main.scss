@@ -1,0 +1,39 @@
+
+
+
+
+.alarm-bar {
+    background: url(#{$imgUrl}ico_arrow_right.svg) no-repeat right 12px center $black1e;
+    font-size: 13px;
+    color: $white;
+    height: $radius38;
+    border-radius: $radius38;
+    padding: 8px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+}
+.alarm-bar span {
+    padding: 0 9px;
+    line-height: $radius22;
+    border-radius: $radius22;
+    color: $black1e;
+    #{$bc}: rgba($green09, 0.5);
+    font-size: 13px;
+    &.#{$yellow} {
+        #{$bc}: $yellow;
+    }
+}
+
+//순서를 주석으로 메모해 둔다 : 클래스명, 배경색
+//리스트배열의 단점: 값이 많아질수록 그 순서를 외워야 함
+
+// @each 아이템변수정의 in 리스트변수명 {
+//     //css코드
+// }
+
+
+
+

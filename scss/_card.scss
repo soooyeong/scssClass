@@ -1,0 +1,109 @@
+//class, radius, shadow, width, height, bgColor, padding
+$shadow1 : 0px 4px 2px 0px rgba(6, 6, 6, 0.2);
+$shadow2 : 0px 4px 2px 0px rgba(6, 6, 6, 0.1);
+$card: 
+type1 20px $shadow1 165px 165px $white 20px,
+type2 20px $shadow1 165px 165px $white 20px;
+
+$cardIcon : (
+    "ico1": '../images/ico_list1_1.svg',
+    "ico2": '../images/ico_list1_2.svg',
+    "ico3": '../images/ico_list1_3.svg',
+    "ico4": '../images/ico_list1_4.svg',
+);
+
+
+@each $class, $radius, $shadow, $width, $height, $bgColor, $padding in $card {
+    .card-#{$class} {
+        border-radius: $radius;
+        box-shadow: $shadow;
+        width: $width;
+        height: $height;
+        background-color: $bgColor;
+        padding: $padding;
+    }
+}
+
+@each $class, $url in cardIcon { 
+    .card-group > li.#{$class} {
+        background-image: url(#{$url});
+        background-position: right 16px bottom 16px;
+        background-repeat: no-repeat;
+    }
+}
+
+//map-get($map: 맵변수이름, $key: 키값)
+
+.left-top-icon {
+    // background-image: url(#{map-get($cardIcon, ico1)});
+    background-image: url(#{map-get($map: $cardIcon, $key:ico1)});
+    background-position: right 16px bottom 16px;
+    background-repeat: no-repeat;
+}
+
+.card-group2 {
+    a {
+        @include background ("ico_arrow_right_gray.svg", right 40px center, null, 20px);
+        @include box($grayca, 20px, 40px, 0px 8px 16px 0px #0000000F);
+        display: block;
+    }
+}
+
+$boxDesign : (
+    1: (
+        "borderColor": $grayca,
+        "radius" : 20px,
+        "padding" : 40px,
+        "shadow" : 0px 8px 16px 0px #0000000F,
+    ),
+    2: (
+        "borderColor": $yellow,
+        "radius" : 20px,
+        "padding" : 40px,
+        "shadow" : 0px 8px 16px 0px #0000000F,
+    )
+);
+
+.box-type1 {
+    @include box2($boxDesign, 1);
+
+}
+.box-type2 {
+    @include box2($boxDesign, 2);
+    @include tablet {
+        font-size: 20px;
+        color: orange;
+    }
+    @include mobile {
+        font-size: 40px;
+        color: pink;
+    }
+
+}
+
+// .card-group3  {
+//     > li {
+//         &:nth-child(1) {
+//             @include background('ico_list1_1.svg', right 16px bottom 16px);
+//         }
+//         &:nth-child(2) {
+//             @include background('ico_list1_2.svg', right 16px bottom 16px);
+//         }
+//         &:nth-child(3) {
+//             @include background('ico_list1_3.svg', right 16px bottom 16px);
+//         }
+//         &:nth-child(4) {
+//             @include background('ico_list1_4.svg', right 16px bottom 16px);
+//         }
+//     }
+// }
+.card-group3  {
+    > li {
+        @for $index from 1 through 10 {
+            &.ico#{$index} {
+                @include background('ico_list1_#{$index}.svg', right 16px bottom 16px);
+            }
+        }
+    }
+}
+

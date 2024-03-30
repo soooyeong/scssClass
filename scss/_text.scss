@@ -1,0 +1,11 @@
+
+//클래스명, 텍스트색상, 줄간격, 텍스트크기
+$textType: tyle1 $black1e 29px 20px, type2 #555D67 23px 15px;
+
+@each $class, $color, $lineHeight, $fontSize in $textType {
+    .text-#{$class} {
+        color: $color;
+        line-height: $lineHeight;
+        font-size: $fontSize;
+    }
+}

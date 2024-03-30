@@ -1,0 +1,9 @@
+$badgeBg: green $green09, blue  $blue00, yellow $yellowff;
+
+
+@each $class, $color in $badgeBg {
+    .alarm-bar span.#{$class} {
+        background-color: $color;
+    }
+
+}

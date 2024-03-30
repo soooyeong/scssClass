@@ -1,0 +1,56 @@
+//믹스인 정의
+// @mixin 믹스인이름(매개변수) {
+//     //css
+// }
+
+//믹스인 실행
+// @include 믹스인이름(인수);
+
+    // background: url() no-repeat 좌표 색상;
+    // background: url() no-repeat 좌표 배경이미지크기 색상;
+    // background: url() no-repeat 좌표 색상;
+    // background-size: 배경이미지크기;
+
+@mixin background($image, $coordinate: null, $color: null, $size: null) {
+    background: url(#{$imgUrl}#{$image}) no-repeat $coordinate $color;
+    background-size: $size;
+}
+// @include background('ico.svg', right 20px bottom 20px, $green09, 20px auto);
+
+@mixin box($borderColor, $radius, $padding, $shadow: null) {
+    border: 1px solid $borderColor;
+    border-radius: $radius;
+    padding: $padding;
+    box-shadow: $shadow;
+}
+@mixin box2($map, $firstKey) {
+    border: 1px solid map-get($map , $firstKey, borderColor);
+    border-radius: map-get($map, $firstKey, radius);
+    padding: map-get($map, $firstKey, padding);
+    box-shadow: map-get($map, $firstKey, shadow);
+}
+
+div { 
+    width: 1000px;
+    @media (width < $mobileSize ) {
+        width: 500px;
+    
+    }
+
+}
+
+@mixin mobile {
+    @media (width < $mobileSize ) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (width < $tabletSize ) {
+        @content;
+    }
+}
+
+
+
+

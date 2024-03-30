@@ -1,0 +1,202 @@
+div {
+  width: 1000px;
+}
+@media (width < 768px) {
+  div {
+    width: 500px;
+  }
+}
+
+textarea, select, input:not([type=checkbox], [type=radio]) {
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  color: dimgray;
+  min-height: 30px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+a {
+  color: inherit;
+}
+
+body {
+  padding: 30px;
+}
+
+.text-tyle1 {
+  color: #1E2530;
+  line-height: 29px;
+  font-size: 20px;
+}
+
+.text-type2 {
+  color: #555D67;
+  line-height: 23px;
+  font-size: 15px;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+
+.mt30 {
+  margin-top: 30px;
+}
+
+.mt40 {
+  margin-top: 40px;
+}
+
+.mt50 {
+  margin-top: 50px;
+}
+
+.mt60 {
+  margin-top: 60px;
+}
+
+.alarm-bar span.green {
+  background-color: #09E27C;
+}
+
+.alarm-bar span.blue {
+  background-color: #00D4EA;
+}
+
+.alarm-bar span.yellow {
+  background-color: #FFDC20;
+}
+
+.card-type1 {
+  border-radius: 20px;
+  box-shadow: 0px 4px 2px 0px rgba(6, 6, 6, 0.2);
+  width: 165px;
+  height: 165px;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.card-type2 {
+  border-radius: 20px;
+  box-shadow: 0px 4px 2px 0px rgba(6, 6, 6, 0.2);
+  width: 165px;
+  height: 165px;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.card-group > li.cardIcon {
+  background-image: url();
+  background-position: right 16px bottom 16px;
+  background-repeat: no-repeat;
+}
+
+.left-top-icon {
+  background-image: url(../images/ico_list1_1.svg);
+  background-position: right 16px bottom 16px;
+  background-repeat: no-repeat;
+}
+
+.card-group2 a {
+  background: url(../images/ico_arrow_right_gray.svg) no-repeat right 40px center;
+  background-size: 20px;
+  border: 1px solid #cacaca;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.0588235294);
+  display: block;
+}
+
+.box-type1 {
+  border: 1px solid #cacaca;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.0588235294);
+}
+
+.box-type2 {
+  border: 1px solid yellow;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.0588235294);
+}
+@media (width < 1024px) {
+  .box-type2 {
+    font-size: 20px;
+    color: orange;
+  }
+}
+@media (width < 768px) {
+  .box-type2 {
+    font-size: 40px;
+    color: pink;
+  }
+}
+
+.card-group3 > li.ico1 {
+  background: url(../images/ico_list1_1.svg) no-repeat right 16px bottom 16px;
+}
+.card-group3 > li.ico2 {
+  background: url(../images/ico_list1_2.svg) no-repeat right 16px bottom 16px;
+}
+.card-group3 > li.ico3 {
+  background: url(../images/ico_list1_3.svg) no-repeat right 16px bottom 16px;
+}
+.card-group3 > li.ico4 {
+  background: url(../images/ico_list1_4.svg) no-repeat right 16px bottom 16px;
+}
+.card-group3 > li.ico5 {
+  background: url(../images/ico_list1_5.svg) no-repeat right 16px bottom 16px;
+}
+.card-group3 > li.ico6 {
+  background: url(../images/ico_list1_6.svg) no-repeat right 16px bottom 16px;
+}
+.card-group3 > li.ico7 {
+  background: url(../images/ico_list1_7.svg) no-repeat right 16px bottom 16px;
+}
+.card-group3 > li.ico8 {
+  background: url(../images/ico_list1_8.svg) no-repeat right 16px bottom 16px;
+}
+.card-group3 > li.ico9 {
+  background: url(../images/ico_list1_9.svg) no-repeat right 16px bottom 16px;
+}
+.card-group3 > li.ico10 {
+  background: url(../images/ico_list1_10.svg) no-repeat right 16px bottom 16px;
+}
+
+textarea {
+  height: 100px;
+}
+
+.alarm-bar {
+  background: url(../images/ico_arrow_right.svg) no-repeat right 12px center #1E2530;
+  font-size: 13px;
+  color: #fff;
+  height: 38px;
+  border-radius: 38px;
+  padding: 8px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.alarm-bar span {
+  padding: 0 9px;
+  line-height: 22px;
+  border-radius: 22px;
+  color: #1E2530;
+  background-color: rgba(9, 226, 124, 0.5);
+  font-size: 13px;
+}
+.alarm-bar span.yellow {
+  background-color: yellow;
+}
+
+/*# sourceMappingURL=index.css.map */
